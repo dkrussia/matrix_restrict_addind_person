@@ -1,3 +1,16 @@
+function check_max_count_person(max_user_count){
+	const count_person = localStorage.getItem('count_person');
+	return !(count_person < max_user_count) || count_person === max_user_count
+}
+
+function addEventToSavePlus(){
+	$("#mainbody\\:editPersRecord\\:saveButton" ).click( "click", function() {
+		let count_person = localStorage.getItem('count_person');
+		count_person ++ 
+		localStorage.setItem('count_person', count_person);
+	});
+}
+
 function t(){
 	const max_count_persons_for_user = {
 		'gpi': 500,
